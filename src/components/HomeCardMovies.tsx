@@ -4,7 +4,6 @@ import { apikey } from "../modules/ApiKey";
 import { Button, Container } from "react-bootstrap";
 import LoadingPinner from "./Loading";
 import "../sass/layout/HomeCardMovies.scss";
-import { Link } from "react-router-dom";
 
 interface Movie {
   id: number;
