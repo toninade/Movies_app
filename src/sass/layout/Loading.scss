@@ -1,0 +1,24 @@
+@use "../abstracts/maxin" as *;
+@use "../abstracts/varibles" as *;
+
+.loading {
+  @include flex_center();
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #00000012;
+  .text {
+    font-size: 25px;
+    margin-top: 10px;
+    color: $logo-one-color;
+    font-family: $shadow-font;
+    letter-spacing: 3px;
+  }
+  .spinner-border {
+    color: $logo-one-color;
+  }
+}

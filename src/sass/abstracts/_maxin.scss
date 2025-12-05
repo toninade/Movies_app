@@ -1,0 +1,25 @@
+@mixin flex_center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin customFlex($a, $b, $c) {
+  display: flex;
+  justify-content: $a;
+  align-items: $b;
+  @if $c != "" {
+    flex-direction: $c;
+  }
+}
+
+@mixin widthHeight($x, $y) {
+  width: $x;
+  height: $y;
+}
+
+@mixin rounded($x) {
+  width: $x;
+  height: $x;
+  border-radius: 50%;
+}
