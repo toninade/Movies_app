@@ -1,6 +1,6 @@
 {
-  "homepage": "https://toninade.github.io/Movies_app/",
-  "name": "movies",
+  "homepage": "https://toninade.github.io/Movies_app",
+  "name": "movies_app",
   "private": true,
   "version": "0.0.0",
   "type": "module",

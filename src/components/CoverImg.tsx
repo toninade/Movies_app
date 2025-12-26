@@ -20,6 +20,16 @@ const CoverImg: React.FC<Cover> = ({
   showInpt,
 }) => {
   const [urlImg, setUrlImg] = useState("");
+  const [inputValue, setInputValue] = useState("");
+
+  const handlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handlSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
   useEffect(() => {
     fetch(`${popular}?api_key=${apikey}`)
       .then((response) => response.json())
@@ -43,9 +53,15 @@ const CoverImg: React.FC<Cover> = ({
           {showImg && <img className="img-cover" src={urlImg} alt="img" />}
 
           {showInpt && (
-            <Form className="form-content">
-              <input placeholder="Search 10000 Of Movies" />
-              <Button className="btn-search">Search</Button>
+            <Form onSubmit={handlSubmit} className="form-content">
+              <input
+                onChange={handlChange}
+                value={inputValue}
+                placeholder="Search 10000 Of Movies"
+              />
+              <Button type="submit" className="btn-search">
+                Search
+              </Button>
             </Form>
           )}
         </div>

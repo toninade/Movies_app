@@ -11,7 +11,7 @@ import TvShows from "./pages/TvShows";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/movies_app">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
